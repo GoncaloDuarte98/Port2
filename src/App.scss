@@ -1,0 +1,38 @@
+@import '/colors';
+@import 'myHeader';
+
+.App {
+    //align-content: start;
+    //display: grid;
+    //grid-template-areas: 'header' 'content' 'footer';
+    //grid-template-columns: 1fr;
+    //grid-template-rows: $headerHeight calc(#{100vh-$headerHeight});
+    //justify-content: start;
+    //min-height: 100vh;
+    //background: $mainBackground;
+    //align-items: stretch;
+    //overflow: hidden;
+    display: grid;
+
+    //grid-template-columns: 1fr;
+    //grid-template-rows: $headerHeight calc(#{100vh-$headerHeight});
+    margin: 0;
+
+    background: $mainBackground;
+    align-content: stretch;
+    justify-content: stretch;
+    justify-items: stretch;
+    align-items: stretch;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 'header' 'content';
+    transition: 500ms ease;
+}
+
+.page {
+    grid-area: content;
+    //margin: 1%;
+    //display: grid;
+    //align-items: stretch;
+    //justify-items: stretch;
+}

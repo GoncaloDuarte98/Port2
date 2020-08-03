@@ -1,0 +1,98 @@
+@import 'src/App';
+@import 'src/colors';
+$borderRadius: 20px;
+.About {
+    //margin: 2%;
+    //margin-top: 0;
+
+    padding: 1vw;
+    background: $atomBack;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 85fr 15fr;
+    grid-template-areas:
+        'aboutContent'
+        'aboutDrawer';
+    align-items: stretch;
+    justify-content: stretch;
+
+    &__Drawer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        flex-direction: row;
+        justify-content: stretch;
+        align-items: stretch;
+        color: black;
+        border-bottom-left-radius: $borderRadius;
+        border-bottom-right-radius: $borderRadius;
+        //padding: 5%;
+
+        background: #253031ff;
+        grid-area: aboutDrawer;
+
+        &__Items {
+            background: #253031ff;
+            border-radius: $borderRadius;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            //border: 1px solid black;
+            color: $headerFontColor;
+            text-decoration: none;
+
+            &:hover {
+                transition: background, font-size 500ms ease;
+                border-radius: 0;
+                background: #c6e0ffff;
+                font-size: 140%;
+                color: #253031ff;
+            }
+
+            &--selected {
+                border-radius: 0;
+
+                background: $dark-slate-gray;
+                color: #c6e0ffff;
+                pointer-events: none;
+            }
+        }
+    }
+
+    &__Content {
+        color: black;
+        padding: 2%;
+        overflow-y: auto;
+        border-top-left-radius: $borderRadius;
+        border-top-right-radius: $borderRadius;
+        background: #c6e0ffff;
+        grid-area: aboutContent;
+    }
+}
+
+#style-1::-webkit-scrollbar-track {
+    //-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+#style-1::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+}
+
+#style-1::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    //-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: $headerColor;
+}
+#d1 {
+    border-bottom-left-radius: $borderRadius;
+}
+
+#d2 {
+}
+
+#d3 {
+    border-bottom-right-radius: $borderRadius;
+}

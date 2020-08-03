@@ -1,0 +1,56 @@
+@import 'src/myHeader';
+@import 'src/colors';
+
+.item1__Container {
+    //background: #82aaff;
+    background: $mainBackground;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &__imageContainer {
+        //background: white;
+        margin-left: 10%;
+        margin-right: 5%;
+        align-self: flex-end;
+        max-width: 35%;
+        max-height: 90%;
+        position: relative; //border-radius: 50%;
+
+        &__image {
+            height: 100%;
+            width: 100%;
+
+            //margin-left: 10%;
+            //margin-right: 5%;
+            //align-self: flex-end;
+            //max-width: 35%;
+            //max-height: 90%;
+            //position: relative; //border-radius: 50%;
+        }
+    }
+
+    &__textContainer {
+        align-self: flex-start;
+        overflow: hidden;
+        flex-wrap: wrap;
+        width: 50%;
+        height: 50%;
+        z-index: 10;
+        //margin-right: 5%;
+
+        //background: white;
+
+        h1 {
+            font-size: 3vmax;
+            color: $headerFontColor;
+        }
+        p {
+            color: white;
+            font-size: 1.5vw;
+        }
+    }
+}

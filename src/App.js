@@ -1,26 +1,59 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import './App.scss';
+import { Route, withRouter } from 'react-router-dom';
+import Home from './Home/Home';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import MyHeader from './myHeader';
+import About from './About/About';
+import { CSSTransition } from 'react-transition-group';
+import newAbout from './About/newAbout';
+function App(props) {
+    const [state, setState] = useState(false);
+
+    function pathToGRid() {
+        if (window.location.pathname === '/') {
+            return 'App App--Home';
+        } else {
+            return 'App';
+        }
+    }
+    const routes = [
+        { path: '/', name: 'Home', Component: Home },
+        { path: '/about', name: 'About', Component: newAbout },
+        { path: '/contact', name: 'Contact', Component: About },
+    ];
+
+    return (
+        <div className="App ">
+            <MyHeader />
+
+            {/*<Switch>*/}
+            {/*    <Route exact path="/">*/}
+            {/*        <Home />*/}
+            {/*    </Route>*/}
+            {/*    <Route exact path="/about">*/}
+            {/*        <About />*/}
+            {/*    </Route>*/}
+            {/*</Switch>*/}
+            {routes.map(({ path, Component }) => (
+                <Route key={path} exact path={path}>
+                    {({ match }) => (
+                        <CSSTransition
+                            in={match != null}
+                            timeout={0}
+                            classNames=""
+                            unmountOnExit
+                        >
+                            <div className="page">
+                                <Component />
+                            </div>
+                        </CSSTransition>
+                    )}
+                </Route>
+            ))}
+            {/*<div className="Content"> Content</div>*/}
+        </div>
+    );
 }
 
-export default App;
+export default withRouter(App);

@@ -1,0 +1,46 @@
+@import 'src/App';
+@import 'src/myHeader';
+
+.Home {
+    //@include Content;
+    //grid-area: content;
+    //color: blue;
+    background: $mainBackground;
+    ////height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'photo homeContent';
+    //justify-content: stretch;
+    justify-content: stretch;
+    justify-items: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.photo {
+    //width: 50vw;
+    max-width: 90%;
+    grid-area: photo;
+}
+
+.homeContent {
+    //border: 1px solid white;
+    grid-area: homeContent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__photo {
+        //border: 1px solid white;
+
+        max-width: 70%;
+    }
+}
+
+@media (orientation: portrait) {
+    .Home {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+}

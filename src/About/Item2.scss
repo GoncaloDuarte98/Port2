@@ -1,0 +1,141 @@
+@import 'src/colors';
+
+.Container {
+    width: 100%;
+    background: $mainBackground;
+
+    &__Title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20vh;
+        background: $mainBackground;
+        //background: yellow;
+
+        font-size: 6vw;
+        font-weight: bold;
+        padding-top: 10vh;
+        color: $headerFontColor;
+    }
+
+    &__Content {
+        padding-bottom: 30vh;
+        //height: 110vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        //background: #82aaff;
+        background: $mainBackground;
+    }
+}
+
+.Card__Container {
+    //position: absolute;
+    width: 60%;
+    background: white;
+    margin-top: 10vh;
+    height: 50vh;
+
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 3px 7px -1px rgba(#000, 0.1);
+
+    line-height: 1.4;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 0;
+    //position: relative;
+
+    &--right {
+        align-self: flex-end;
+        //position: absolute;
+    }
+
+    &__photo {
+        height: 100%;
+        width: 40%;
+        object-fit: cover;
+        order: 3;
+
+        clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+
+        &--right {
+            order: 1;
+            clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+        }
+    }
+
+    &__TextDiv {
+        order: 2;
+        padding: 2%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        //width: 60%;
+        h1 {
+            font-size: 2vw;
+        }
+        h2 {
+            font-size: 1vw;
+        }
+
+        p {
+            font-size: 1vw;
+        }
+    }
+}
+
+@media (orientation: portrait) {
+    .Card__Container {
+        width: 100%;
+        flex-direction: column;
+        align-content: center;
+
+        &--right {
+            align-self: center;
+            //position: absolute;
+        }
+
+        &__photo {
+            height: 50%;
+            width: 100%;
+            object-fit: cover;
+            order: 1;
+
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
+            &--right {
+                order: 1;
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+            }
+        }
+
+        &__TextDiv {
+            order: 2;
+            padding: 2%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            //width: 60%;
+            h1 {
+                font-size: 2vmax;
+            }
+            h2 {
+                font-size: 1vmax;
+            }
+
+            p {
+                font-size: 1vmax;
+            }
+        }
+    }
+}
+
+$color_white: #fff;
+$color_prime: #5ad67d;
+$color_grey: #e2e2e2;
+$color_grey_dark: #a2a2a2;

@@ -1,0 +1,49 @@
+@import 'colors';
+$homeAnimDuration: 500ms;
+$headerHeight: 10vh;
+.Header {
+    color: $headerFontColor;
+    display: flex;
+    align-items: center;
+    grid-area: header;
+    height: $headerHeight;
+    background: $mainBackground;
+    //width: 100vw;
+    min-height: 40px;
+    position: sticky;
+    top: 0;
+    justify-items: center;
+    z-index: 10000;
+
+    justify-content: center;
+    transition: all $homeAnimDuration ease;
+    //&--Home {
+    //    width: 50vw;
+    //}
+
+    &__button {
+        transition: all 500ms ease;
+        color: $headerFontColor;
+        text-decoration: none;
+        margin-left: 3%;
+
+        &:hover {
+            transform: scale(1.2, 1.2);
+        }
+
+        &--selected {
+            color: $headerSelectedFontColor;
+            border-bottom: 2px solid $headerSelectedFontColor;
+            &:hover {
+                transform: none;
+            }
+        }
+    }
+}
+
+@media (orientation: portrait) {
+    .Header {
+        justify-content: space-around;
+        padding-right: 0;
+    }
+}
