@@ -10,16 +10,19 @@
         justify-content: center;
         height: 20vh;
         background: $mainBackground;
-        //background: yellow;
 
-        font-size: 6vw;
+        // font-size: 6vw;
+        font-size: 12vw;
         font-weight: bold;
         padding-top: 10vh;
         color: $headerFontColor;
     }
 
     &__Content {
-        padding-bottom: 30vh;
+        /*         margin-top: 25vh;
+ */
+
+        // padding-bottom: 30vh;
         //height: 110vh;
         display: flex;
         flex-direction: column;
@@ -41,13 +44,19 @@
     box-shadow: 0 3px 7px -1px rgba(#000, 0.1);
 
     line-height: 1.4;
-    border-radius: 5px;
+    border-radius: 0;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+
     overflow: hidden;
     z-index: 0;
     //position: relative;
 
     &--right {
         align-self: flex-end;
+        border-radius: 0;
+        border-bottom-left-radius: 15px;
+        border-top-left-radius: 15px;
         //position: absolute;
     }
 
@@ -82,7 +91,7 @@
         }
 
         p {
-            font-size: 1vw;
+            font-size: 12pt;
         }
     }
 }
@@ -120,6 +129,7 @@
             flex-direction: column;
             align-content: center;
             justify-content: center;
+            flex-wrap: wrap;
             //width: 60%;
             h1 {
                 font-size: 2vmax;
@@ -129,7 +139,7 @@
             }
 
             p {
-                font-size: 1vmax;
+                font-size: 2vw;
             }
         }
     }

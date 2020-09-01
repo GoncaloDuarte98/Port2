@@ -18,7 +18,8 @@ function Card(local, photo, right) {
             x: right ? '100%' : '-100%',
 
             opacity: 0,
-            ease: Power1.easeOut,
+            ease: Power3.easeOut,
+
             // duration: 2,
 
             scrollTrigger: {
@@ -27,7 +28,6 @@ function Card(local, photo, right) {
 
                 start: 'center bottom',
                 end: 'bottom 75%',
-
                 // markers: {
                 //     Color: 'black',
                 //
@@ -65,28 +65,27 @@ function Card(local, photo, right) {
     );
 }
 
-export default function Item2(props: Props) {
+export default function Item2(Props) {
     const Zarco = {
         name: 'Escola Secundária João Gonçalves Zarco',
-        date: '2007-2008',
+        date: '2011-2016',
         text:
-            'In tempus convallis condimentum. Donec lobortis tincidunt dui tincidunt semper. Nullam id pretium lectus, at pharetra neque. Pellentesque finibus accumsan urna. Phasellus accumsan vulputate pretium. Maecenas eleifend erat eget massa viverra vehicula a quis mi. Ut eget leo sed risus maximus gravida. Mauris vitae lacus id turpis condimentum iaculis.',
+            'Twelve years of schooling – European Qualification Framework (EQF) – Level 4. Completed school in 2016 taking part in a project called “Pós-Zarco” from the 10th to the 12th which grouped the best students from the school in one class',
     };
 
     const Feup = {
         name: 'Faculdade de Engenharia da Universidade do Porto',
-        date: '2016-',
+        date: '2016',
 
         text:
-            'In tempus convallis condimentum. Donec lobortis tincidunt dui tincidunt semper. Nullam id pretium lectus, at pharetra neque. Pellentesque finibus accumsan urna. Phasellus accumsan vulputate pretium. Maecenas eleifend erat eget massa viverra vehicula a quis mi. Ut eget leo sed risus maximus gravida. Mauris vitae lacus id turpis condimentum iaculis.',
+            'Currently in the 5th and last year of Master in Electrical and Computers Engineering. Automation and robotics',
     };
 
     const Poznan = {
-        name: 'Politeknika Poznan',
+        name: 'Politechnika Poznańska ',
         date: '2019-2020',
 
-        text:
-            'In tempus convallis condimentum. Donec lobortis tincidunt dui tincidunt semper. Nullam id pretium lectus, at pharetra neque. Pellentesque finibus accumsan urna. Phasellus accumsan vulputate pretium. Maecenas eleifend erat eget massa viverra vehicula a quis mi. Ut eget leo sed risus maximus gravida. Mauris vitae lacus id turpis condimentum iaculis.',
+        text: 'Studied one semester in Poznan, Poland - Erasmus program',
     };
 
     let TitleContainer = useRef(null);
@@ -122,7 +121,6 @@ export default function Item2(props: Props) {
             <div ref={(el) => (Title = el)} className="Container__Title">
                 <div ref={(el) => (TitleContainer = el)}>EDUCATION</div>
             </div>
-            <section className="curved" />
             <div className="Container__Content">
                 {Card(Zarco, ZarcoPhoto, true)}
                 {Card(Feup, FeupPhoto, false)}

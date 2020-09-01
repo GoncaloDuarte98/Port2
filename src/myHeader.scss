@@ -15,25 +15,35 @@ $headerHeight: 10vh;
     justify-items: center;
     z-index: 10000;
 
-    justify-content: center;
+    justify-content: flex-end;
     transition: all $homeAnimDuration ease;
+    padding-right: 7%;
     //&--Home {
     //    width: 50vw;
     //}
 
     &__button {
+        display: grid;
         transition: all 500ms ease;
         color: $headerFontColor;
         text-decoration: none;
         margin-left: 3%;
+        // width: 7%;
+        height: 50%;
+        text-align: center;
+        align-items: center;
+        transition: all 2000ms ease-out;
+        // border-radius: 15px;
 
         &:hover {
             transform: scale(1.2, 1.2);
         }
 
         &--selected {
+            
             color: $headerSelectedFontColor;
-            border-bottom: 2px solid $headerSelectedFontColor;
+            border-bottom: 1px solid $headerSelectedFontColor;
+            border-top: 1px solid $headerSelectedFontColor;
             &:hover {
                 transform: none;
             }
@@ -45,5 +55,10 @@ $headerHeight: 10vh;
     .Header {
         justify-content: space-around;
         padding-right: 0;
+
+        &__button {
+            margin-right: 3%;
+            margin-left: 3%;
+        }
     }
 }

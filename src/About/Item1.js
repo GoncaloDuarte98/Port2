@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './Item1.scss';
 import 'animate.css/animate.min.css';
-import manPhoto from './manPhoto1.png';
+import manPhoto from './cv_circle.png';
 
 import 'react-vertical-timeline-component/style.min.css';
 import { Power3, Power1, gsap } from 'gsap';
@@ -22,13 +22,14 @@ export default function Item1(props) {
             x: '100%',
             opacity: 0,
             duration: 1,
+            stagger: 0.1,
             ease: Power3.easeIn,
         });
         item1TimeLine__Intro.from(item1__Image, {
             duration: 1,
-
+            rotation: '-100_clockwise',
             opacity: 0,
-            y: '100%',
+            x: '-100%',
             ease: Power3.easeInOut,
         });
 
@@ -74,25 +75,29 @@ export default function Item1(props) {
         //         },
         //     },
         // });
-        //Photo Exit Slide
+        // Photo Exit Slide
         // gsap.to(item1__Image, {
-        //     // duration: 2,
+        //     duration: 6,
         //     // x: '-150%',
-        //
+        //     // rotation: '100_clockwise',
+        //     // opacity: 0,
+        //     x: '-100%',
         //     ease: Power3.easeOut,
+
+        //     // ease: Power3.easeOut,
         //     scrollTrigger: {
         //         trigger: item1__Image,
         //         // scrub: true,
-        //         pin: true,
+        //         // pin: true,
         //         // pin the trigger element while active
-        //         start: '-50% center',
+        //         start: '60% center',
         //         // start: 'top center', // when the top of the trigger hits the top of the viewport
-        //         // end: 'bottom top',
-        //         markers: {
-        //             Color: 'black',
-        //
-        //             fontSize: '20px',
-        //         },
+        //         // end: '80% 20%',
+        //         // markers: {
+        //         //     Color: 'black',
+
+        //         //     fontSize: '20px',
+        //         // },
         //     },
         // });
     });
@@ -115,16 +120,14 @@ export default function Item1(props) {
                 <div ref={(el) => (item1__Text__Text = el)}>
                     <h1>Profile</h1>
                     <p>
-                        Curabitur a aliquam leo, non porttitor tellus. Phasellus
-                        vehicula fermentum ultrices. Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit. Sed bibendum metus bibendum
-                        justo mattis, elementum ultricies elit dapibus. Nam in
-                        tellus at enim vulputate consequat. Praesent leo purus,
-                        malesuada non urna eu, laoreet mattis nibh. Nulla
-                        facilisi. Aliquam luctus fermentum tincidunt. Nunc
-                        pretium bibendum justo, id semper ante dignissim eu.
-                        Nulla tortor purus, mattis vitae venenatis vel,
-                        porttitor id est. Ut eget sapien massa.
+                        Hello! I am Gonçalo, a 22 year old student from
+                        Porto,Portugal. I have been swotting the art of
+                        Programming for the last 5 years. I enjoy being
+                        challenged and engaging with projects that require me to
+                        work outside my comfort and knowledge set and I am
+                        always ready to learn new languages and development
+                        techniques. Below you can get more details about my
+                        skills.
                     </p>
                 </div>
             </div>

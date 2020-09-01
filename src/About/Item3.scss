@@ -1,0 +1,104 @@
+.Item3Container {
+    /*     background: rgb(204, 14, 163);
+ */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    align-content: flex-start;
+    overflow: hidden;
+}
+
+.skills {
+    text-align: center;
+    overflow: hidden;
+    color: #bcab79ff;
+    font-weight: bolder;
+
+    font-size: 12vw;
+}
+
+.item3Content {
+    /*     background: yellow;
+ */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+
+    flex-wrap: wrap;
+}
+
+.progCardContainer {
+    border-radius: 25px;
+    color: #fff5e5;
+    color: #242424;
+    background: #242424;
+    background: white;
+    margin: 5%;
+    width: 20%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    word-wrap: break-word;
+    /*     box-shadow: 5px 5px 20px #bcab79;
+ */
+    &__picLogo {
+        max-width: 50%;
+        max-height: 50%;
+        /*         object-fit: cover;
+ */
+    }
+    &__textContainer {
+        display: grid;
+        font-size: 1vw;
+        height: 50%;
+        text-align: center;
+        align-content: center;
+    }
+
+    &:hover {
+        transition: all 500ms;
+        transform: scale(1.2, 1.2);
+    }
+}
+
+@media (orientation: portrait) {
+    .item3Content {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .progCardContainer {
+        flex-direction: row;
+        justify-content: flex-start;
+        height: 20vh;
+        width: 80%;
+
+        &:hover {
+            transition: all 500ms;
+            transform: none;
+        }
+
+        &__picLogo {
+            max-width: 30%;
+            max-height: 80%;
+            object-fit: cover;
+            margin-right: 10%;
+        }
+        &__textContainer {
+            display: display;
+            font-size: 3vw;
+
+            width: 70%;
+            height: 100%;
+            text-align: start;
+            align-content: center;
+            justify-content: flex-start;
+        }
+    }
+}

@@ -19,7 +19,13 @@
 
 .photo {
     //width: 50vw;
+    max-height: 40vh;
     max-width: 90%;
+    grid-area: photo;
+}
+
+.cvPhoto {
+    max-width: 50%;
     grid-area: photo;
 }
 
@@ -28,11 +34,33 @@
     grid-area: homeContent;
     display: flex;
     align-items: center;
-    justify-content: center;
+    align-content: center;
+    justify-content: flex-start;
+    justify-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 20%;
+    height: 50vh;
+
     &__photo {
         //border: 1px solid white;
 
+        max-height: 40%;
         max-width: 70%;
+    }
+
+    &__CVphoto {
+        max-height: 50%;
+
+        position: absolute;
+        bottom: 10%;
+
+        //border: 1px solid white;
+        max-width: 15%;
+
+        img {
+            max-width: 100%;
+        }
     }
 }
 
