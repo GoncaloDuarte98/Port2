@@ -122,7 +122,7 @@ export default function Item1(props) {
                     <p>
                         Hello! I am Gonçalo, a 22 year old student from
                         Porto,Portugal. I have been swotting the art of
-                        Programming for the last 5 years. I enjoy being
+                        Programming for the last 6 years. I enjoy being
                         challenged and engaging with projects that require me to
                         work outside my comfort and knowledge set and I am
                         always ready to learn new languages and development
