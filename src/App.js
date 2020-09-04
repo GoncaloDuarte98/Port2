@@ -2,13 +2,17 @@ import React, { useEffect, useState } from 'react';
 import './App.scss';
 import { Route, withRouter } from 'react-router-dom';
 import Home from './Home/Home';
-import Contact from './Contact/Contact'
+import Contact from './Contact/Contact';
 import MyHeader from './myHeader';
 import About from './About/About';
 import { CSSTransition } from 'react-transition-group';
 import newAbout from './About/newAbout';
 function App(props) {
     const [state, setState] = useState(false);
+
+    useEffect(() => {
+        document.title = 'Gonçalo Duarte';
+    }, []);
 
     function pathToGRid() {
         if (window.location.pathname === '/') {

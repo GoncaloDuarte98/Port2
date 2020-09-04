@@ -67,7 +67,7 @@
     }
 }
 
-@media (orientation: portrait) {
+@media screen and (orientation: portrait)  {
     .item3Content {
         flex-direction: column;
         align-content: center;

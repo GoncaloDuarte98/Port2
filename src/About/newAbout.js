@@ -5,12 +5,9 @@ import Item1 from './Item1';
 import Item2 from './Item2';
 import Item3 from './Item3';
 
-
 import 'react-vertical-timeline-component/style.min.css';
 
 export default function NewAbout(props) {
-    
-
     const lings = [
         {
             name: 'Portuguese',
@@ -66,6 +63,15 @@ export default function NewAbout(props) {
             <Item2 />
             {Item3(lings, 'LANGUAGES')}
             {Item3(langs, 'PROGRAMMING')}
+            <div className="playStore__container">
+                <a
+                className="playStore__container__text"
+                href="https://play.google.com/store/apps/developer?id=Goncalo+Duarte"
+                rel="noopener noreferrer"
+                target="_blank"
+                >GooglePlay profile</a>
+                </div>
+
             {Item3(soft, 'SOFTWARE')}
             {Item3(os, 'OS')}
             {/*  <div className="item2">Fim</div> */}

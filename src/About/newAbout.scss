@@ -53,3 +53,23 @@
     transform: skewY(18deg);
     transform-origin: top right;
 }
+
+
+.playStore{
+    
+    &__container{
+        height: 10vh;
+        width: 100%;
+        // background: white;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+
+        &__text{
+            text-decoration: none;
+            color:white;
+        }
+    }
+}
