@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import './Item1.scss';
 import 'animate.css/animate.min.css';
 import Row from 'react-bootstrap/Row';
-import manPhoto from './cv_circle.png';
+import manPhoto from './cv_circle-min.png';
 import Col from 'react-bootstrap/Col';
 
 import 'react-vertical-timeline-component/style.min.css';
@@ -115,7 +115,6 @@ export default function Item1(props) {
                             ref={(el) => (item1__Image = el)}
                             src={manPhoto}
                             alt={'PfPic'}
-                            
                             className="item1__Container__imageContainer"
                         />
                     </Container>
