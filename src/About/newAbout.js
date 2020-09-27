@@ -6,6 +6,8 @@ import Item2 from './Item2';
 import Item3 from './Item3';
 
 import 'react-vertical-timeline-component/style.min.css';
+import { Container } from 'react-bootstrap';
+import SkillsTable from './SkillsTable';
 
 export default function NewAbout(props) {
     const lings = [
@@ -30,9 +32,10 @@ export default function NewAbout(props) {
         { name: 'C', pic: require('./skres/c.svg'), details: '' },
         { name: 'Python', pic: require('./skres/py.svg'), details: 'OpenCv' },
         {
-            name: 'Javascript',
+            name: 'WebDev',
             pic: require('./skres/js.svg'),
-            details: 'ES6,ReactJs,React-Native,Redux',
+            details:
+                'ES6,ReactJs,React-Native,Redux,Basic NodeJS Express knowledge, material-UI, react-bootstrap',
         },
         { name: 'Unity', pic: require('./skres/unity.jpg'), details: 'C#' },
         { name: 'SQL', pic: require('./skres/sql.png'), details: '' },
@@ -58,23 +61,57 @@ export default function NewAbout(props) {
     ];
 
     return (
-        <div className="aboutContainer">
+        // <div className="aboutContainer">
+        //     <Item1 />
+        //     <Item2 />
+        //     {Item3(lings, 'LANGUAGES')}
+        //     {Item3(langs, 'PROGRAMMING')}
+        //     <div className="playStore__container">
+        //         <a
+        //         className="playStore__container__text"
+        //         href="https://play.google.com/store/apps/developer?id=Goncalo+Duarte"
+        //         rel="noopener noreferrer"
+        //         target="_blank"
+        //         >GooglePlay profile</a>
+        //         <a
+        //         className="playStore__container__text"
+        //         href="https://github.com/GoncaloDuarte98"
+        //         rel="noopener noreferrer"
+        //         target="_blank"
+        //         >Github profile</a>
+        //         </div>
+
+        //     {Item3(soft, 'SOFTWARE')}
+        //     {Item3(os, 'OS')}
+        //     {/*  <div className="item2">Fim</div> */}
+        // </div>
+
+        <Container fluid className=" p-0">
             <Item1 />
             <Item2 />
             {Item3(lings, 'LANGUAGES')}
             {Item3(langs, 'PROGRAMMING')}
             <div className="playStore__container">
                 <a
-                className="playStore__container__text"
-                href="https://play.google.com/store/apps/developer?id=Goncalo+Duarte"
-                rel="noopener noreferrer"
-                target="_blank"
-                >GooglePlay profile</a>
-                </div>
+                    className="playStore__container__text"
+                    href="https://play.google.com/store/apps/developer?id=Goncalo+Duarte"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                >
+                    GooglePlay profile
+                </a>
+                <a
+                    className="playStore__container__text"
+                    href="https://github.com/GoncaloDuarte98"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                >
+                    Github profile
+                </a>
+            </div>
 
             {Item3(soft, 'SOFTWARE')}
             {Item3(os, 'OS')}
-            {/*  <div className="item2">Fim</div> */}
-        </div>
+        </Container>
     );
 }

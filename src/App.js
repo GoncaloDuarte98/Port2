@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import './App.scss';
-import { Route, withRouter } from 'react-router-dom';
+import { Route, withRouter, Switch } from 'react-router-dom';
 import Home from './Home/Home';
 import Contact from './Contact/Contact';
 import MyHeader from './myHeader';
 import About from './About/About';
 import { CSSTransition } from 'react-transition-group';
 import newAbout from './About/newAbout';
+import { Container } from 'react-bootstrap';
+import ParticlesComp from './ParticlesComp';
+import NewAbout from './About/newAbout';
 function App(props) {
     const [state, setState] = useState(false);
 
@@ -28,35 +31,51 @@ function App(props) {
     ];
 
     return (
-        <div className="App ">
-            <MyHeader />
+        // <div className="App ">
+        //     <MyHeader />
 
-            {/*<Switch>*/}
-            {/*    <Route exact path="/">*/}
-            {/*        <Home />*/}
-            {/*    </Route>*/}
-            {/*    <Route exact path="/about">*/}
-            {/*        <About />*/}
-            {/*    </Route>*/}
-            {/*</Switch>*/}
-            {routes.map(({ path, Component }) => (
-                <Route key={path} exact path={path}>
-                    {({ match }) => (
-                        <CSSTransition
-                            in={match != null}
-                            timeout={0}
-                            classNames=""
-                            unmountOnExit
-                        >
-                            <div className="page">
-                                <Component />
-                            </div>
-                        </CSSTransition>
-                    )}
+        //     {/*<Switch>*/}
+        //     {/*    <Route exact path="/">*/}
+        //     {/*        <Home />*/}
+        //     {/*    </Route>*/}
+        //     {/*    <Route exact path="/about">*/}
+        //     {/*        <About />*/}
+        //     {/*    </Route>*/}
+        //     {/*</Switch>*/}
+        //     {routes.map(({ path, Component }) => (
+        //         <Route key={path} exact path={path}>
+        //             {({ match }) => (
+        //                 <CSSTransition
+        //                     in={match != null}
+        //                     timeout={0}
+        //                     classNames=""
+        //                     unmountOnExit
+        //                 >
+        //                     <div className="page">
+        //                         <Component />
+        //                     </div>
+        //                 </CSSTransition>
+        //             )}
+        //         </Route>
+        //     ))}
+        //     {/*<div className="Content"> Content</div>*/}
+        // </div>
+        <div className="App">
+            <MyHeader />
+            <Switch>
+                <Route path="/" exact>
+                    <Home />
                 </Route>
-            ))}
-            {/*<div className="Content"> Content</div>*/}
+                <Route path="/about" exact>
+                    <NewAbout/>
+                </Route>
+                <Route path="/contact" exact>
+                    <Contact />
+                </Route>
+            </Switch>
+            <ParticlesComp />
         </div>
+        
     );
 }
 

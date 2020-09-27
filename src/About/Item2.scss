@@ -1,18 +1,27 @@
 @import 'src/colors';
 
+.NewCardImageMorph {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 52% 94%, 0 100%);
+}
+
+.blackedimg {
+    background: rgba(0, 0, 0, 1);
+    -webkit-filter: brightness(50%);
+}
+
 .Container {
-    width: 100%;
-    background: $mainBackground;
+    // width: 100%;
+    // background: $mainBackground;
 
     &__Title {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 20vh;
-        background: $mainBackground;
+        height: 20vmin;
+        // background: $mainBackground;
 
         // font-size: 6vw;
-        font-size: 12vw;
+        font-size: 11vw;
         font-weight: bold;
         padding-top: 10vh;
         color: $headerFontColor;
@@ -28,7 +37,7 @@
         flex-direction: column;
         align-items: flex-start;
         //background: #82aaff;
-        background: $mainBackground;
+        // background: $mainBackground;
     }
 }
 
@@ -98,7 +107,9 @@
 
 @media (orientation: portrait) {
     .Card__Container {
-        width: 100%;
+        border-radius: 15px;
+        // width: 95%;
+
         flex-direction: column;
         align-content: center;
 

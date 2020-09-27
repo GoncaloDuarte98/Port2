@@ -121,7 +121,7 @@ export default function Item3(array, title) {
     }, []);
 
     return (
-        <div className="Item3Container">
+        <div className="Item3Container p3">
             <div ref={(el) => (titleSkills = el)}>
                 <p className="skills">{title}</p>
             </div>
